@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>DATOS DEL USUARIO</title>
+</head>
+<body>
+    <h1>[[#{usuario.formulario}]]</h1>
+    <a th:href="@{/}">[[#{accion.regresar}]]</a>
+    <br/>
+    <form th:action="@{/guardar}" method="POST" th:object="${usuario}">
+        <br/>
+
+        <label for="cedula" th:text="#{usuario.cedula}"></label>
+        <input type="text" name="cedula" th:field="*{cedula}" required />
+        <br/>
+
+        <label for="password" th:text="#{usuario.password}"></label>
+        <input type="password" name="password" th:field="*{password}"/>
+        <br/>
+
+        <label for="nombre" th:text="#{usuario.nombre}"></label>
+        <input type="nombre" name="nombre" th:field="*{nombre}" required>
+        <br/>
+
+        <label for="email" th:text="#{usuario.email}"></label>
+        <input type="email" name="email" th:field="*{email}" />
+        <br/>
+
+        <input type="reset" th:value="#{accion.reiniciar}" /> &nbsp;&nbsp;&nbsp;
+        <input type="submit" name="guardar" th:value="#{accion.agregar}" />
+    </form>
+</body>
+</html>

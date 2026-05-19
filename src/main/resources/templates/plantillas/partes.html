@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de CRUD MVC</title>
+</head>
+<body>
+    <header th:fragment="cabecero">
+        <h1 th:text="#{plantilla.titulo}">APP WEB CON SPRING BOOT</h1>
+    </header>
+
+    <footer th:fragment="pie">
+        <span th:text="#{plantilla.pie}">By: Sergio Luis Vargas Melendez</span>
+        <p>
+            <a href="https://www.youtube.com/@SERGIOLUISVARGASMELENDEZESTUDI">
+                Canal de Youtube
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
