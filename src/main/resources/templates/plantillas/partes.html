@@ -5,17 +5,24 @@
     <title>Ejemplo de CRUD MVC</title>
 </head>
 <body>
+
     <header th:fragment="cabecero">
-        <h1 th:text="#{plantilla.titulo}">APP WEB CON SPRING BOOT</h1>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+                <span class="navbar-brand fw-semibold" th:text="#{plantilla.titulo}">APP WEB CON SPRING BOOT</span>
+            </div>
+        </nav>
     </header>
 
-    <footer th:fragment="pie">
-        <span th:text="#{plantilla.pie}">By: Sergio Luis Vargas Melendez</span>
-        <p>
-            <a href="https://www.youtube.com/@SERGIOLUISVARGASMELENDEZESTUDI">
-                Canal de Youtube
+    <footer th:fragment="pie" class="border-top mt-5 py-3 bg-white">
+        <div class="container d-flex justify-content-between align-items-center">
+            <small class="text-muted" th:text="#{plantilla.pie}">Sergio Luis Vargas Melendez</small>
+            <a href="https://www.youtube.com/@SERGIOLUISVARGASMELENDEZESTUDI"
+               class="text-muted text-decoration-none small">
+                <i class="bi bi-youtube me-1"></i>Canal de Youtube
             </a>
-        </p>
+        </div>
     </footer>
+
 </body>
 </html>
